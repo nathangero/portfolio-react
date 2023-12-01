@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 
 function App() {
 
+  // Show Navbar and footer throughout the app
   return (
     <>
       <Navbar />
