@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Navbar() {
     const NAV_LINKS = {
@@ -7,6 +8,32 @@ export default function Navbar() {
         CONTACT: "contact"
     }
 
+    const styles = {
+        "hamburgerMenu": {
+            "width": "50px",
+            "height": "25px",
+            "display": "flex",
+            "flexDirection": "column",
+            "justifyContent": "space-between",
+            "cursor": "pointer",
+            "border": "none"
+        },
+        "hamburgerLine": {
+            "width": "100%",
+            "height": "3px",
+            "backgroundColor": "black",
+        },
+        "test": {
+            "color": "red",
+        }
+    }
+
+    const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
+
+    /**
+     * Sets the active tab 
+     * @param {String} link 
+     */
     const onClickLink = (link) => {
         switch (link) {
             case NAV_LINKS.ABOUT_ME:
@@ -30,10 +57,21 @@ export default function Navbar() {
     }
 
     return (
-        <nav className='navbar navbar-expand-sm fixed-top '>
+        <nav className='navbar navbar-expand-md fixed-top '>
             <div className='container-fluid'>
-                <div className='collapse navbar-collapse justify-content-end'>
-                    <div className='navbar-nav nav-underline'>
+                <h1 className='fs-1'>Nathan Geronimo</h1>
+
+                {isMobile &&
+                    <button style={styles.hamburgerMenu} className="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                        <div style={styles.hamburgerLine}></div>
+                        <div style={styles.hamburgerLine}></div>
+                        <div style={styles.hamburgerLine}></div>
+                    </button>
+                }
+
+
+                <div id='navbar' className='collapse navbar-collapse justify-content-end'>
+                    <div className='navbar-nav nav-underline fs-4'>
                         <Link
                             id='nav-aboutme'
                             className='nav-link'
@@ -68,5 +106,28 @@ export default function Navbar() {
                 </div>
             </div>
         </nav>
+
     );
 }
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container navbarContainer">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div class="collapse navbar-right navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Menu 0</a></li>
+                    <li><a href="#">Menu 1</a></li>
+                    <li><a href="#">Menu 2</a></li>
+                    <li><a href="#">Menu 3</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</body>
