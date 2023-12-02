@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 export default function Navbar() {
     const NAV_LINKS = {
         ABOUT_ME: "/",
-        PORTFOLIO: "/portfolio",
+        PORTFOLIO: "/projects",
         CONTACT: "/contact",
         RESUME: '/resume'
     }
@@ -120,10 +120,10 @@ export default function Navbar() {
                                 <li>
                                     <Link
                                         id='nav-portfolio'
-                                        to={'/portfolio'}
+                                        to={'/projects'}
                                         onClick={() => onClickLink(NAV_LINKS.PORTFOLIO)}
                                     >
-                                        Portfolio
+                                        Projects
                                     </Link>
                                 </li>
 
