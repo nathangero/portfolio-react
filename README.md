@@ -31,4 +31,8 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 
 [Idea to import bootstrap.min.js](https://stackoverflow.com/a/55890504)
 
+[Idea to apply style to all router pages](https://stackoverflow.com/a/47898141)
+
+[Idea to calculate the router page height](https://stackoverflow.com/q/47623772)
+
 ## Resources

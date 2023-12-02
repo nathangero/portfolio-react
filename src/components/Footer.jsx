@@ -2,8 +2,14 @@
 
 export default function Footer() {
 
+    const styles = {
+        footer: {
+            "height": "60px"
+        }
+    }
+
     return (
-        <footer className="navbar fixed-bottom justify-content-center bg-dark text-white">
+        <footer className="navbar sticky-bottom justify-content-center bg-dark text-white m-0" style={ styles.footer }>
             <ul className="list-group list-group-horizontal list-unstyled">
                 <li className="mx-4">
                     <a target="_blank" href="https://github.com/nathangero" role="button">

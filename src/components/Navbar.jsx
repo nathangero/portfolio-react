@@ -7,6 +7,12 @@ export default function Navbar() {
         CONTACT: "contact"
     }
 
+    const styles = {
+        navbar: {
+            "height": "75px"
+        }
+    }
+
     /**
      * Sets the active tab 
      * @param {String} link 
@@ -35,7 +41,7 @@ export default function Navbar() {
 
 
     return (
-        <nav className='navbar navbar-expand-md fixed-top '>
+        <nav className='navbar navbar-expand-md' style={ styles.navbar }>
             <div className='container-fluid'>
                 <Link
                     className='navbar-brand fs-1 text-dark'
