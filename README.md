@@ -27,6 +27,12 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 
 [React monitor screen size](https://stackoverflow.com/a/44481429)
 
+[React onBlur docs](https://legacy.reactjs.org/docs/events.html)
+
+[HTML .reportValidity()](https://stackoverflow.com/a/7562439)
+
+[JS for bootstrap modal](https://getbootstrap.com/docs/5.3/components/modal/#via-javascript)
+
 [Idea for .navbar-collapse.show](https://stackoverflow.com/a/42401686)
 
 [Idea to import bootstrap.min.js](https://stackoverflow.com/a/55890504)
@@ -34,5 +40,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 [Idea to apply style to all router pages](https://stackoverflow.com/a/47898141)
 
 [Idea to calculate the router page height](https://stackoverflow.com/q/47623772)
+
+[Idea for onBlur in react](https://stackoverflow.com/a/30619329)
 
 ## Resources
