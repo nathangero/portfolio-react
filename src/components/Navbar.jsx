@@ -5,7 +5,8 @@ export default function Navbar() {
     const NAV_LINKS = {
         ABOUT_ME: "/",
         PORTFOLIO: "/portfolio",
-        CONTACT: "/contact"
+        CONTACT: "/contact",
+        RESUME: '/resume'
     }
 
     const styles = {
@@ -26,18 +27,28 @@ export default function Navbar() {
                 document.getElementById('nav-aboutme').className = "nav-link active";
                 document.getElementById('nav-portfolio').className = "nav-link";
                 document.getElementById('nav-contact').className = "nav-link";
+                document.getElementById('nav-resume').className = "nav-link";
                 break;
 
             case NAV_LINKS.PORTFOLIO:
                 document.getElementById('nav-aboutme').className = "nav-link";
                 document.getElementById('nav-portfolio').className = "nav-link active";
                 document.getElementById('nav-contact').className = "nav-link";
+                document.getElementById('nav-resume').className = "nav-link";
                 break;
 
             case NAV_LINKS.CONTACT:
                 document.getElementById('nav-aboutme').className = "nav-link";
                 document.getElementById('nav-portfolio').className = "nav-link";
                 document.getElementById('nav-contact').className = "nav-link active";
+                document.getElementById('nav-resume').className = "nav-link";
+                break;
+
+            case NAV_LINKS.RESUME:
+                document.getElementById('nav-aboutme').className = "nav-link";
+                document.getElementById('nav-portfolio').className = "nav-link";
+                document.getElementById('nav-contact').className = "nav-link";
+                document.getElementById('nav-resume').className = "nav-link active";
                 break;
         }
     }
@@ -130,8 +141,10 @@ export default function Navbar() {
 
                             <li>
                                 <Link
+                                    id='nav-resume'
                                     className='nav-link'
-                                    to={'/contact'} // TODO: Download the resume
+                                    to={'/resume'} 
+                                    onClick={() => onClickLink(NAV_LINKS.RESUME)}
                                 >
                                     Resume
                                 </Link>
