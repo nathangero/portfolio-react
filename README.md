@@ -47,3 +47,5 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 [Idea for onBlur in react](https://stackoverflow.com/a/30619329)
 
 ## Resources
+
+[react-responsive package docs](https://www.npmjs.com/package/react-responsive)

@@ -1,11 +1,17 @@
 import { Modal } from "bootstrap";
-
+import { useMediaQuery } from 'react-responsive'
 
 export default function ContactPage() {
 
     const styles = {
         textarea: {
             resize: "none"
+        },
+        mobile: {
+            width: "75%"
+        },
+        desktop: {
+            width: "50%"
         }
     }
 
@@ -25,29 +31,36 @@ export default function ContactPage() {
         target.reportValidity();
     }
 
+    const largeScreen = useMediaQuery({ query: '(min-width: 900px)' })
+
     return (
         <section className="m-3">
-            <h2>
+            <h2 className="text-center">
                 Send me a message!
             </h2>
 
             <hr />
 
-            <form className="" onSubmit={onClickSubmit}>
-                <div className="mb-3">
-                    <label htmlFor="contact-name" className="form-label">Your name</label>
-                    <input id="contact-name" type="text" className="form-control" onBlur={handleOnBlur} required />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="contact-email" className="form-label">Your email</label>
-                    <input id="contact-email" type="email" className="form-control" aria-describedby="emailHelp" onBlur={handleOnBlur} required />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="contact-message" className="form-label">Message</label>
-                    <textarea id="contact-message" type="text" className="form-control" style={styles.textarea} rows={5} aria-describedby="required" onBlur={handleOnBlur} required />
-                </div>
-                <button type="submit" className="btn btn-primary w-25">Send</button>
-            </form>
+            <div className="d-flex justify-content-center">
+                <form className="" onSubmit={onClickSubmit} style={largeScreen ? styles.desktop : styles.mobile}>
+                    <div className="mb-3">
+                        <label htmlFor="contact-name" className="form-label">Your name</label>
+                        <input id="contact-name" type="text" className="form-control" onBlur={handleOnBlur} required />
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="contact-email" className="form-label">Your email</label>
+                        <input id="contact-email" type="email" className="form-control" aria-describedby="emailHelp" onBlur={handleOnBlur} required />
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="contact-message" className="form-label">Message</label>
+                        <textarea id="contact-message" type="text" className="form-control" style={styles.textarea} rows={5} aria-describedby="required" onBlur={handleOnBlur} required />
+                    </div>
+
+                    <div className="text-center">
+                        <button type="submit" className="btn btn-primary w-25">Send</button>
+                    </div>
+                </form>
+            </div>
 
             <div id="modal-confirm-send" className="modal" tabIndex={-1}>
                 <div className="modal-dialog">
