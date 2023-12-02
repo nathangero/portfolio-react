@@ -11,6 +11,7 @@ function App() {
       "minHeight": "calc(100vh - 135px)" // Get the size of the view then subtract the navbar and footer heights
     }
   }
+  
   // Show Navbar and footer throughout the app
   return (
     <>

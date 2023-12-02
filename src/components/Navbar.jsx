@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
     const NAV_LINKS = {
-        ABOUT_ME: "aboutme",
-        PORTFOLIO: "portfolio",
-        CONTACT: "contact"
+        ABOUT_ME: "/",
+        PORTFOLIO: "/portfolio",
+        CONTACT: "/contact"
     }
 
     const styles = {
@@ -41,11 +42,13 @@ export default function Navbar() {
         }
     }
 
-    console.log("window.location.pathname:", window.location.pathname);
-    if (window.location.pathname === '/') {
-        // document.getElementById('nav-aboutme').className = "nav-link active";
-    }
+    // Set the current navbar tab to "active" only on page startup depending where the user is.
+    const location = useLocation().pathname;
+    useEffect(() => {
+       onClickLink(location);
+    }, []);
 
+    
     return (
         <nav className='navbar navbar-expand-md mb-3' style={styles.navbar}>
             <div className='container-fluid'>
