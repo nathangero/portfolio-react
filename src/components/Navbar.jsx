@@ -7,6 +7,12 @@ export default function Navbar() {
         CONTACT: "contact"
     }
 
+    const styles = {
+        navbar: {
+            "height": "75px"
+        }
+    }
+
     /**
      * Sets the active tab 
      * @param {String} link 
@@ -32,10 +38,13 @@ export default function Navbar() {
                 break;
         }
     }
-
+    console.log("window.location.pathname:", window.location.pathname);
+    // if (window.location.pathname === '/' || window.location.pathname === `/${NAV_LINKS.ABOUT_ME}`) {
+    //     onClickLink(NAV_LINKS.ABOUT_ME)
+    // }
 
     return (
-        <nav className='navbar navbar-expand-md fixed-top '>
+        <nav className='navbar navbar-expand-md' style={ styles.navbar }>
             <div className='container-fluid'>
                 <Link
                     className='navbar-brand fs-1 text-dark'
