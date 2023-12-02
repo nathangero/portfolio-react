@@ -9,7 +9,8 @@ export default function Navbar() {
 
     const styles = {
         navbar: {
-            "height": "75px"
+            "height": "75px",
+            "backgroundColor": "#2baeff"
         }
     }
 
@@ -20,6 +21,7 @@ export default function Navbar() {
     const onClickLink = (link) => {
         switch (link) {
             case NAV_LINKS.ABOUT_ME:
+                console.log("set about me to active")
                 document.getElementById('nav-aboutme').className = "nav-link active";
                 document.getElementById('nav-portfolio').className = "nav-link";
                 document.getElementById('nav-contact').className = "nav-link";
@@ -38,13 +40,14 @@ export default function Navbar() {
                 break;
         }
     }
+
     console.log("window.location.pathname:", window.location.pathname);
-    // if (window.location.pathname === '/' || window.location.pathname === `/${NAV_LINKS.ABOUT_ME}`) {
-    //     onClickLink(NAV_LINKS.ABOUT_ME)
-    // }
+    if (window.location.pathname === '/') {
+        // document.getElementById('nav-aboutme').className = "nav-link active";
+    }
 
     return (
-        <nav className='navbar navbar-expand-md' style={ styles.navbar }>
+        <nav className='navbar navbar-expand-md mb-3' style={styles.navbar}>
             <div className='container-fluid'>
                 <Link
                     className='navbar-brand fs-1 text-dark'
@@ -54,42 +57,62 @@ export default function Navbar() {
                     Nathan Geronimo
                 </Link>
 
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbar" aria-controls="offcanvas" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div id='navbar' className='collapse navbar-collapse justify-content-end'>
+                <div id='navbar' className='offcanvas offcanvas-end navbar-offcanvas justify-content-end' tabIndex={-1} aria-labelledby='offcanvasNavbarLabel'>
+                    <div className="offcanvas-header justify-content-end">
+                        <button type="button" className="btn-close fs-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div className='offcanvas-body'>
+                        <ul className="navbar-nav nav-underline fs-5 justify-content-end flex-grow-1 pe-3">
+                            <li>
+                                <Link
+                                    id='nav-aboutme'
+                                    className='nav-link'
+                                    to={'/'}
+                                    onClick={() => onClickLink(NAV_LINKS.ABOUT_ME)}
+                                >
+                                    About Me
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link
+                                    id='nav-portfolio'
+                                    className='nav-link'
+                                    to={'/portfolio'}
+                                    onClick={() => onClickLink(NAV_LINKS.PORTFOLIO)}
+                                >
+                                    Portfolio
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link
+                                    id='nav-contact'
+                                    className='nav-link'
+                                    to={'/contact'}
+                                    onClick={() => onClickLink(NAV_LINKS.CONTACT)}
+                                >
+                                    Contact Me
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link
+                                    className='nav-link'
+                                    to={'/contact'} // TODO: Download the resume
+                                >
+                                    Resume
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
                     <div className='navbar-nav nav-underline fs-5'>
-                        <Link
-                            id='nav-aboutme'
-                            className='nav-link'
-                            to={'/'}
-                            onClick={() => onClickLink(NAV_LINKS.ABOUT_ME)}
-                        >
-                            About Me
-                        </Link>
-                        <Link
-                            id='nav-portfolio'
-                            className='nav-link'
-                            to={'/portfolio'}
-                            onClick={() => onClickLink(NAV_LINKS.PORTFOLIO)}
-                        >
-                            Portfolio
-                        </Link>
-                        <Link
-                            id='nav-contact'
-                            className='nav-link'
-                            to={'/contact'}
-                            onClick={() => onClickLink(NAV_LINKS.CONTACT)}
-                        >
-                            Contact Me
-                        </Link>
-                        <Link
-                            className='nav-link'
-                            to={'/contact'} // TODO: Download the resume
-                        >
-                            Resume
-                        </Link>
+
                     </div>
                 </div>
             </div>
