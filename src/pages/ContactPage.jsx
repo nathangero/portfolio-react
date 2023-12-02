@@ -12,6 +12,10 @@ export default function ContactPage() {
         },
         desktop: {
             width: "50%"
+        },
+        button: {
+            "backgroundColor": "#2baeff",
+            "color": "white"
         }
     }
 
@@ -57,7 +61,7 @@ export default function ContactPage() {
                     </div>
 
                     <div className="text-center">
-                        <button type="submit" className="btn btn-primary w-25">Send</button>
+                        <button type="submit" className="btn w-25" style={styles.button} >Send</button>
                     </div>
                 </form>
             </div>

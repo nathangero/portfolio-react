@@ -11,6 +11,10 @@ export default function ProjectCard(props) {
         },
         card: {
             height: "100%",
+        },
+        button: {
+            "backgroundColor": "#2baeff",
+            "color": "white"
         }
     }
 
@@ -24,8 +28,8 @@ export default function ProjectCard(props) {
                 <p className="card-text text-center">{project.description}</p>
 
                 <div className="d-flex justify-content-around">
-                    <a target="_blank" href={project.deploy_link} className="btn btn-primary">Website</a>
-                    <a target="_blank" href={project.repo_link} className="btn btn-primary">Code Repo</a>
+                    <a target="_blank" rel="noreferrer" href={project.deploy_link} className="btn btn-primary" style={styles.button}>Website</a>
+                    <a target="_blank" rel="noreferrer" href={project.repo_link} className="btn btn-primary" style={styles.button}>Code Repo</a>
                 </div>
             </div>
         </div>
