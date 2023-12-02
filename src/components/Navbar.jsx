@@ -85,72 +85,70 @@ export default function Navbar() {
 
 
     return (
-        <header>
-            <nav className='navbar navbar-expand-md mb-3' style={styles.navbar}>
-                <div className='container-fluid'>
-                    <Link
-                        className='navbar-brand fs-1'
-                        to={'/'}
-                        onClick={() => onClickLink(NAV_LINKS.ABOUT_ME)}
-                    >
-                        Nathan Geronimo
-                    </Link>
+        <nav className='navbar navbar-expand-md mb-3' style={styles.navbar}>
+            <div className='container-fluid'>
+                <Link
+                    className='navbar-brand fs-1'
+                    to={'/'}
+                    onClick={() => onClickLink(NAV_LINKS.ABOUT_ME)}
+                >
+                    Nathan Geronimo
+                </Link>
 
-                    <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbar" aria-controls="offcanvas" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
+                <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbar" aria-controls="offcanvas" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
 
-                    <div id='navbar' className='offcanvas offcanvas-end navbar-offcanvas justify-content-end' tabIndex={-1} aria-labelledby='offcanvasNavbarLabel'>
-                        <div className="offcanvas-header justify-content-end">
-                            <button id='button-close-offcanvas' type="button" className="btn-close fs-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
+                <div id='navbar' className='offcanvas offcanvas-end navbar-offcanvas justify-content-end' tabIndex={-1} aria-labelledby='offcanvasNavbarLabel'>
+                    <div className="offcanvas-header justify-content-end">
+                        <button id='button-close-offcanvas' type="button" className="btn-close fs-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
 
-                        <div className='offcanvas-body'>
-                            <ul className="navbar-nav nav-underline fs-5 justify-content-end flex-grow-1 pe-3">
-                                <li>
-                                    <Link
-                                        id='nav-aboutme'
-                                        to={'/'}
-                                        onClick={() => onClickLink(NAV_LINKS.ABOUT_ME)}
-                                    >
-                                        About Me
-                                    </Link>
-                                </li>
+                    <div className='offcanvas-body'>
+                        <ul className="navbar-nav nav-underline fs-5 justify-content-end flex-grow-1 pe-3">
+                            <li>
+                                <Link
+                                    id='nav-aboutme'
+                                    to={'/'}
+                                    onClick={() => onClickLink(NAV_LINKS.ABOUT_ME)}
+                                >
+                                    About Me
+                                </Link>
+                            </li>
 
-                                <li>
-                                    <Link
-                                        id='nav-portfolio'
-                                        to={'/portfolio'}
-                                        onClick={() => onClickLink(NAV_LINKS.PORTFOLIO)}
-                                    >
-                                        Portfolio
-                                    </Link>
-                                </li>
+                            <li>
+                                <Link
+                                    id='nav-portfolio'
+                                    to={'/projects'}
+                                    onClick={() => onClickLink(NAV_LINKS.PORTFOLIO)}
+                                >
+                                    Projects
+                                </Link>
+                            </li>
 
-                                <li>
-                                    <Link
-                                        id='nav-contact'
-                                        to={'/contact'}
-                                        onClick={() => onClickLink(NAV_LINKS.CONTACT)}
-                                    >
-                                        Contact Me
-                                    </Link>
-                                </li>
+                            <li>
+                                <Link
+                                    id='nav-contact'
+                                    to={'/contact'}
+                                    onClick={() => onClickLink(NAV_LINKS.CONTACT)}
+                                >
+                                    Contact Me
+                                </Link>
+                            </li>
 
-                                <li>
-                                    <Link
-                                        id='nav-resume'
-                                        to={'/resume'}
-                                        onClick={() => onClickLink(NAV_LINKS.RESUME)}
-                                    >
-                                        Resume
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
+                            <li>
+                                <Link
+                                    id='nav-resume'
+                                    to={'/resume'}
+                                    onClick={() => onClickLink(NAV_LINKS.RESUME)}
+                                >
+                                    Resume
+                                </Link>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
     );
 }
