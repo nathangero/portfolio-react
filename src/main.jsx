@@ -9,7 +9,7 @@ import './index.css'
 import App from './App.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 import AboutMePage from './pages/AboutMePage.jsx';
-import PortfolioPage from './pages/PortfolioPage.jsx';
+import ProjectPage from './pages/ProjectPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import ResumePage from './pages/ResumePage.jsx';
 
@@ -24,8 +24,8 @@ const router = createBrowserRouter([
         element: <AboutMePage />
       },
       {
-        path: '/portfolio',
-        element: <PortfolioPage />
+        path: '/projects',
+        element: <ProjectPage />
       },
       {
         path: '/contact',
