@@ -48,7 +48,7 @@ export default function ResumePage() {
     const onClickDownloadResume = () => {
         console.log("@onClickDownloadResume")
 
-        const resumePath = "src/assets/nathan_resume.pdf";
+        const resumePath = "/images/nathan_resume.pdf";
         const tempLink = document.createElement("a"); // Create a clickable element
         tempLink.href = resumePath;
         tempLink.download = "Nathan's Resume.pdf"; // Set name for file
