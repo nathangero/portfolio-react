@@ -1,0 +1,58 @@
+[
+    {
+        "name": "D&D Save Data",
+        "deploy_link": "https://dnd-save-data.web.app/",
+        "repo_link": "https://github.com/nathangero/dnd-save-data",
+        "image": "src/assets/project_images/dnd-save-data-example.PNG",
+        "alt": "showing the character page in the D&D website",
+        "description": "A place to keep track of your D&D 5e characters"
+    },
+    {
+        "name": "play.join()",
+        "deploy_link": "https://play-join-6cebcc414827.herokuapp.com",
+        "repo_link": "https://github.com/Clarsen1782/play.join",
+        "image": "src/assets/project_images/play-join-homepage.png",
+        "alt": "homepage for play.join showing the search bar",
+        "description": "A site to find other gamers and party up"
+    },
+    {
+        "name": "Food Finder",
+        "deploy_link": "https://fenriragni.github.io/food-finder/",
+        "repo_link": "https://github.com/FenriRagni/food-finder",
+        "image": "src/assets/project_images/food-finder.png",
+        "alt": "homepage for food finder showing the search form for a location and food type",
+        "description": "A site to find recipes AND restaurants"
+    },
+    {
+        "name": "A Tech Blog",
+        "deploy_link": "https://tech-blog-nathangero-142ac22ce678.herokuapp.com",
+        "repo_link": "https://github.com/nathangero/tech-blog",
+        "image": "src/assets/project_images/tech-blog.PNG",
+        "alt": "homepage for a CMS-style blog",
+        "description": "A place to blog about tech"
+    },
+    {
+        "name": "J.A.T.E (PWA)",
+        "deploy_link": "https://text-editor-nag.onrender.com",
+        "repo_link": "https://github.com/nathangero/tech-blog",
+        "image": "src/assets/project_images/jate-pwa.PNG",
+        "alt": "progressive web app of Just Another Text Editor",
+        "description": "Just Another Text Editor to edit text"
+    },
+    {
+        "name": "Weather Dashboard",
+        "deploy_link": "https://nathangero.github.io/weather-dashboard/",
+        "repo_link": "https://github.com/nathangero/weather-dashboard",
+        "image": "src/assets/project_images/weather.PNG",
+        "alt": "weather result for Fremont, CA giving the current weather and the 5 day forecast",
+        "description": "See current weather and the 5-day forecast for a city"
+    },
+    {
+        "name": "Tagalog Conjugation",
+        "deploy_link": "http://conjugate-tagalog.surge.sh",
+        "repo_link": "https://gitlab.com/d4rkz3r011/conjugate-tagalog",
+        "image": "src/assets/project_images/conjugate-tagalog-example.PNG",
+        "alt": "homepage showing an input bar where the user can enter a word to conjugate in Tagalog",
+        "description": "A place to practice your Tagalog Conjugations"
+    }
+]
