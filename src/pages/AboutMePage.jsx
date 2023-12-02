@@ -28,7 +28,7 @@ export default function AboutMePage() {
                 </p>
                 <br />
                 <p>
-                    Please check out my work <Link className='text-primary' to={'/'}>here</Link> or contact me <Link className='text-primary' to={'/contact'}>here</Link>, and thank you for visiting!
+                    Please check out my work <Link className='text-primary' to={'/portfolio'}>here</Link> or contact me <Link className='text-primary' to={'/contact'}>here</Link>, and thank you for visiting!
                 </p>
             </div>
         </section>
