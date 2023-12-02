@@ -49,17 +49,18 @@ export default function Navbar() {
         onClickLink(location);
     }, [location]);
 
+    // Keep track of menu open state
     const [isMenuOpen, setMenuState] = useState(false);
     useEffect(() => {
         // set eventlistener after page has rendered
         const myOffcanvas = document.getElementById('navbar')
 
-        myOffcanvas.addEventListener('hidden.bs.offcanvas', event => {
+        myOffcanvas.addEventListener('hidden.bs.offcanvas', () => {
             // console.log("hide menu")
             setMenuState(false);
         })
 
-        myOffcanvas.addEventListener('show.bs.offcanvas', event => {
+        myOffcanvas.addEventListener('show.bs.offcanvas', () => {
             // console.log("show menu")
             setMenuState(true);
         })
@@ -70,8 +71,6 @@ export default function Navbar() {
         // console.log("toggled isMenuOpen?", isMenuOpen)
         if (!isMenuOpen) document.getElementById('button-close-offcanvas').click();
     }, [isMenuOpen])
-
-
 
 
     return (

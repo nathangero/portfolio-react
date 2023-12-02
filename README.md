@@ -17,6 +17,7 @@ You can view my portfolio here: [https://glittery-puffpuff-5e401e.netlify.app/](
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 ```
+* For some reason using the `offcanvas` navbar leaves the window dimmed if closed by clicking outside of it. If closed by the `X` close button, then the window is not left dimmed
 
 ## Code Snippets
 
