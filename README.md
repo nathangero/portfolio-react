@@ -31,6 +31,8 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 
 [HTML .reportValidity()](https://stackoverflow.com/a/7562439)
 
+[JS for bootstrap modal](https://getbootstrap.com/docs/5.3/components/modal/#via-javascript)
+
 [Idea for .navbar-collapse.show](https://stackoverflow.com/a/42401686)
 
 [Idea to import bootstrap.min.js](https://stackoverflow.com/a/55890504)
