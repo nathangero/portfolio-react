@@ -38,7 +38,10 @@ export default function Navbar() {
                 break;
         }
     }
-
+    console.log("window.location.pathname:", window.location.pathname);
+    // if (window.location.pathname === '/' || window.location.pathname === `/${NAV_LINKS.ABOUT_ME}`) {
+    //     onClickLink(NAV_LINKS.ABOUT_ME)
+    // }
 
     return (
         <nav className='navbar navbar-expand-md' style={ styles.navbar }>

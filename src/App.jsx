@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 function App() {
   const styles = {
     backgroundDefault: {
-      "backgroundColor": "red",
+      // "backgroundColor": "red",
       "height": "!important",
       "min-height": "calc(100vh - 135px)" // Get the size of the view then subtract the navbar and footer heights
     }
