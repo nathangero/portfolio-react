@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
@@ -42,13 +42,38 @@ export default function Navbar() {
         }
     }
 
+
     // Set the current navbar tab to "active" only on page startup depending where the user is.
     const location = useLocation().pathname;
     useEffect(() => {
-       onClickLink(location);
-    }, []);
+        onClickLink(location);
+    }, [location]);
 
-    
+    const [isMenuOpen, setMenuState] = useState(false);
+    useEffect(() => {
+        // set eventlistener after page has rendered
+        const myOffcanvas = document.getElementById('navbar')
+
+        myOffcanvas.addEventListener('hidden.bs.offcanvas', event => {
+            // console.log("hide menu")
+            setMenuState(false);
+        })
+
+        myOffcanvas.addEventListener('show.bs.offcanvas', event => {
+            // console.log("show menu")
+            setMenuState(true);
+        })
+    }, [])
+
+    // Used to get rid of the odd dimmed screen if offcanvas is dismissed NOT by the close button
+    useEffect(() => {
+        // console.log("toggled isMenuOpen?", isMenuOpen)
+        if (!isMenuOpen) document.getElementById('button-close-offcanvas').click();
+    }, [isMenuOpen])
+
+
+
+
     return (
         <nav className='navbar navbar-expand-md mb-3' style={styles.navbar}>
             <div className='container-fluid'>
@@ -66,7 +91,7 @@ export default function Navbar() {
 
                 <div id='navbar' className='offcanvas offcanvas-end navbar-offcanvas justify-content-end' tabIndex={-1} aria-labelledby='offcanvasNavbarLabel'>
                     <div className="offcanvas-header justify-content-end">
-                        <button type="button" className="btn-close fs-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <button id='button-close-offcanvas' type="button" className="btn-close fs-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
 
                     <div className='offcanvas-body'>
@@ -113,9 +138,6 @@ export default function Navbar() {
                                 </Link>
                             </li>
                         </ul>
-                    </div>
-                    <div className='navbar-nav nav-underline fs-5'>
-
                     </div>
                 </div>
             </div>
