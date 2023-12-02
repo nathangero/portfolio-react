@@ -26,6 +26,8 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 
 [Bootstrap align navbar to right](https://www.studytonight.com/bootstrap/how-to-align-bootstrap-5-navbar-items-to-the-right)
 
+[React create download button](https://www.geeksforgeeks.org/how-to-download-pdf-file-in-reactjs/)
+
 [React monitor screen size](https://stackoverflow.com/a/44481429)
 
 [React onBlur docs](https://legacy.reactjs.org/docs/events.html)
