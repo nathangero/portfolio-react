@@ -3,8 +3,8 @@
 export default function ProjectPage() {
     
     return (
-        <div>
+        <section>
             Projects
-        </div>
+        </section>
     )
 }

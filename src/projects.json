@@ -1,0 +1,44 @@
+[
+    {
+        "name": "D&D Save Data",
+        "deploy_link": "https://dnd-save-data.web.app/",
+        "repo_link": "https://github.com/nathangero/dnd-save-data",
+        "image": "src/assets/project_images/dnd-save-data-example.PNG"
+    },
+    {
+        "name": "play.join",
+        "deploy_link": "https://play-join-6cebcc414827.herokuapp.com",
+        "repo_link": "https://github.com/Clarsen1782/play.join",
+        "image": "src/assets/project_images/play-join-homepage.png"
+    },
+    {
+        "name": "Food Finder",
+        "deploy_link": "https://fenriragni.github.io/food-finder/",
+        "repo_link": "https://github.com/FenriRagni/food-finder",
+        "image": "src/assets/project_images/food-finder.png"
+    },
+    {
+        "name": "A Tech Blog",
+        "deploy_link": "https://tech-blog-nathangero-142ac22ce678.herokuapp.com",
+        "repo_link": "https://github.com/nathangero/tech-blog",
+        "image": "src/assets/project_images/tech-blog.PNG"
+    },
+    {
+        "name": "J.A.T.E (PWA)",
+        "deploy_link": "https://text-editor-nag.onrender.com",
+        "repo_link": "https://github.com/nathangero/tech-blog",
+        "image": "src/assets/project_images/jate-pwa.PNG"
+    },
+    {
+        "name": "Weather Dashboard",
+        "deploy_link": "https://nathangero.github.io/weather-dashboard/",
+        "repo_link": "https://github.com/nathangero/weather-dashboard",
+        "image": "src/assets/project_images/weather.PNG"
+    },
+    {
+        "name": "Tagalog Conjugation",
+        "deploy_link": "http://conjugate-tagalog.surge.sh",
+        "repo_link": "https://gitlab.com/d4rkz3r011/conjugate-tagalog",
+        "image": "src/assets/project_images/conjugate-tagalog-example.PNG"
+    }
+]
