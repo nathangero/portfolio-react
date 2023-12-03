@@ -4,10 +4,6 @@ import { useMediaQuery } from 'react-responsive'
 
 export default function ContactPage() {
 
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-
     const FIELD = {
         NAME: "name",
         EMAIL: "email",
@@ -44,24 +40,6 @@ export default function ContactPage() {
 
         const bootstrapModal = new Modal(modal);
         bootstrapModal.show();
-    }
-
-    // Update the state variables with what the user is typing in
-    const handleOnChange = ({ target }) => {
-        switch (target.id) {
-            case `contact-${FIELD.NAME}`:
-                setName(target.value)
-                break;
-
-            case `contact-${FIELD.EMAIL}`:
-                setEmail(target.value)
-                break;
-
-            case `contact-${FIELD.MESSAGE}`:
-                setMessage(target.value)
-                break;
-
-        }
     }
 
     // Check if the "fill out your field" message pops up or not
@@ -103,7 +81,6 @@ export default function ContactPage() {
                             id="contact-name"
                             type="text"
                             className="form-control"
-                            onChange={handleOnChange}
                             onBlur={handleOnBlur}
                             required
                         />
@@ -118,7 +95,6 @@ export default function ContactPage() {
                             className="form-control"
                             aria-describedby="emailHelp"
                             onBlur={handleOnBlur}
-                            onChange={handleOnChange}
                             required
                         />
                         <p id="field-email" style={styles.required}>*Please use a valid {FIELD.EMAIL}</p>
@@ -134,7 +110,6 @@ export default function ContactPage() {
                             rows={5}
                             aria-describedby="required"
                             onBlur={handleOnBlur}
-                            onChange={handleOnChange}
                             required
                         />
                         <p id="field-message" style={styles.required}>*Please fill out your {FIELD.MESSAGE}</p>
