@@ -46,9 +46,8 @@ export default function ContactPage() {
         bootstrapModal.show();
     }
 
+    // Update the state variables with what the user is typing in
     const handleOnChange = ({ target }) => {
-        console.log("@handleOnChange")
-        console.log("looking at:", target.id);
         switch (target.id) {
             case `contact-${FIELD.NAME}`:
                 setName(target.value)
@@ -65,9 +64,8 @@ export default function ContactPage() {
         }
     }
 
+    // Check if the "fill out your field" message pops up or not
     const handleOnBlur = ({ target }) => {
-        console.log("@handleOnBlur")
-        console.log("looking at:", target.id);
         switch (target.id) {
             case `contact-${FIELD.NAME}`:
                 document.getElementById(`field-${FIELD.NAME}`)
