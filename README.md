@@ -4,6 +4,8 @@
 
 This is an updated version of [my portfolio](https://nathangero.github.io/my-portfolio/) but this time written in React! Here you'll find a section about me, some of my projects I've created/worked on, and my resume. Thank you for taking the time to visit, and feel free to reach out to me for job opportunities.
 
+This site is mobile **and** dark theme friendly!
+
 You can view my portfolio here: [https://glittery-puffpuff-5e401e.netlify.app/](https://glittery-puffpuff-5e401e.netlify.app/)
 
 ## Image

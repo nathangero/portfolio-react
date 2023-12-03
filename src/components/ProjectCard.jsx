@@ -20,7 +20,7 @@ export default function ProjectCard(props) {
 
     return (
         <div className="card" style={styles.card}>
-            <div style={styles.image}>
+            <div className="card-img-container" style={styles.image}>
                 <img src={project.image} className="card-img-top" alt={project.alt} />
             </div>
             <div className="card-body">

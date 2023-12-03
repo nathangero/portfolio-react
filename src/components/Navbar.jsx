@@ -23,7 +23,7 @@ export default function Navbar() {
     const onClickLink = (link) => {
         switch (link) {
             case NAV_LINKS.ABOUT_ME:
-                console.log("set about me to active")
+                // console.log("set about me to active")
                 document.getElementById('nav-aboutme').className = "nav-link active";
                 document.getElementById('nav-portfolio').className = "nav-link";
                 document.getElementById('nav-contact').className = "nav-link";
