@@ -1,5 +1,4 @@
 import { Modal } from "bootstrap";
-import { useState } from "react";
 import { useMediaQuery } from 'react-responsive'
 
 export default function ContactPage() {
