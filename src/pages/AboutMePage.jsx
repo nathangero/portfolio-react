@@ -17,10 +17,10 @@ export default function AboutMePage() {
             <div className="d-flex justify-content-center">
                 <img src="/images/selfie-aug23.jpg" style={styles.profilePic} />
             </div>
-
+            
             <div id="about-me-text" className="p-3">
                 <p>
-                    I&apos;m a full stack iOS Developer based in the Bay Area. My specialties are in SwiftUI, Google Cloud Platform, Google Firebase, and NodeJS. I created and currently maintain iOS rideshare apps called Fijo Rideshare & Delivery and Fijo Driver. Currently, I&apos;m learning how to be a full-stack engineer using the following technologies: MongoDB, Express, React, NodeJS, GraphQL, and MySQL. I&apos;m learning through the UC Berkeley Extension course and hope to make a careers switch afterwards.
+                    I&apos;m a full stack iOS and MERN web developer based in the Bay Area. My specialties are React, SwiftUI, Express.js, MySQL, MongoDB, REST api, GraphQL, Firebase, and Google Cloud Platform. I created and currently maintain iOS rideshare apps called <a target="_blank" href="https://apps.apple.com/us/app/fijo-rideshare-delivery/id1545438502" rel="noreferrer">Fijo Rideshare & Delivery</a> and <a target="_blank" href="https://apps.apple.com/us/app/fijo-driver/id1545438729" rel="noreferrer">Fijo Driver</a>. In Dec 2023, I just finished a coding bootcamp through UC Berkeley Extension on learning how to be a full-stack MERN web developer using the following technologies: MongoDB, Express, React, Node.js, REST, GraphQL, and MySQL.
                 </p>
                 <br />
                 <p>
@@ -28,7 +28,7 @@ export default function AboutMePage() {
                 </p>
                 <br />
                 <p>
-                    Please check out my work <Link className='text-primary' to={'/portfolio'}>here</Link> or contact me <Link className='text-primary' to={'/contact'}>here</Link>, and thank you for visiting!
+                    Please check out my work <Link className='text-primary' to={'/projects'}>here</Link> or contact me <Link className='text-primary' to={'/contact'}>here</Link>, and thank you for visiting!
                 </p>
             </div>
         </section>
