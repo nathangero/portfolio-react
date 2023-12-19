@@ -1,5 +1,13 @@
 [
     {
+        "name": "Readit",
+        "deploy_link": "https://project-readit-ae03b3828bf5.herokuapp.com/",
+        "repo_link": "https://github.com/flimits/readit",
+        "image": "/images/project_images/readit_home_page.PNG",
+        "alt": "screenshot of the ReadIt homepage showing a few posts with titles, content, tags, and applauds",
+        "description": "A microblogging site to share your thoughts."
+    },
+    {
         "name": "D&D Save Data",
         "deploy_link": "https://dnd-save-data.web.app/",
         "repo_link": "https://github.com/nathangero/dnd-save-data",
