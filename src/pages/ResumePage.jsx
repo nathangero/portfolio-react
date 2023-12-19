@@ -11,18 +11,22 @@ export default function ResumePage() {
 
     const skills = {
         frontend: [
-            "ReactJS",
+            "HTML",
             "CSS",
+            "JavaScript",
+            "React.js",
             "Bootstrap",
             "SwiftUI"
         ],
         backend: [
-            "Express",
+            "Express.js",
             "MySQL",
             "Sequelize (ORM)",
             "NoSQL",
             "MongoDB",
-            "Mongoose (ORM)",
+            "Mongoose (ODM)",
+            "Apollo GraphQL",
+            "JWT"
         ],
         misc: [
             "MERN",
@@ -44,6 +48,8 @@ export default function ResumePage() {
         return <li key={index} className="list-group-item">{skill}</li>
     })
 
+    const resumeUrl = "https://drive.google.com/file/d/1_viEtvupcaMoGpP5IhfqBNGa65fml7Rp/view?usp=drive_link";
+
 
     const onClickDownloadResume = () => {
         console.log("@onClickDownloadResume")
@@ -60,19 +66,20 @@ export default function ResumePage() {
 
     return (
         <section className="m-3">
-            <h2 className='text-center'>Below you&apos;ll find a download link to my resume and a list of my skills</h2>
-            <br/>
-            <div className="text-center">
-                <button className="btn" style={styles.button} type="button" onClick={onClickDownloadResume}>Download My Resume</button>
+            <h2 className='text-center'>Below you&apos;ll find my resume and a list of my skills</h2>
+            <br />
+            <div className="d-flex justify-content-center">
+                <a target="_blank" href={resumeUrl} rel="noreferrer" className="btn mx-2" style={styles.button} type="button">View My Resume</a>
+                <button className="btn mx-2" style={styles.button} type="button" onClick={onClickDownloadResume}>Download My Resume</button>
             </div>
 
-            <br/><br/>
+            <br /><br />
 
             <div className="text-center">
                 <h3 className="text-decoration-underline fs-2">Skills</h3>
             </div>
-            
-            <br/>
+
+            <br />
 
             <div className='row'>
                 <div className='col-sm'>
