@@ -1,4 +1,5 @@
 import { Modal } from "bootstrap";
+import { useState } from "react";
 import { useMediaQuery } from 'react-responsive'
 
 export default function ContactPage() {
@@ -29,8 +30,28 @@ export default function ContactPage() {
         }
     }
 
+    const [contactSubject, setSubject] = useState('');
+    const [contactEmail, setEmail] = useState('');
+    const [contactMessage, setBody] = useState('');
+
+    const onHandleChangeName = ({ target }) => {
+        setSubject(target.value)
+    }
+
+    const onHandleChangeEmail = ({ target }) => {
+        setEmail(target.value)
+    }
+
+    const onHandleChangeMessage = ({ target }) => {
+        setBody(target.value)
+    }
+
     const onClickSubmit = (event) => {
         event.preventDefault();
+
+        // const mailto = `mailto:nathanageronimo@gmail.com?subject=${contactSubject}&body=${contactMessage}`;
+        // console.log("mailto:", mailto);
+        // window.location.href = mailto;
 
         event.target.reset();
 
@@ -75,11 +96,13 @@ export default function ContactPage() {
             <div className="d-flex justify-content-center">
                 <form className="" onSubmit={onClickSubmit} style={largeScreen ? styles.desktop : styles.mobile}>
                     <div className="mb-3">
-                        <label htmlFor="contact-name" className="form-label">Your name</label>
+                        <label htmlFor="contact-subject" className="form-label">Email Subject</label>
                         <input
-                            id="contact-name"
+                            id="contact-subject"
                             type="text"
                             className="form-control"
+                            value={contactSubject}
+                            onChange={onHandleChangeName}
                             onBlur={handleOnBlur}
                             required
                         />
@@ -93,6 +116,8 @@ export default function ContactPage() {
                             type="email"
                             className="form-control"
                             aria-describedby="emailHelp"
+                            value={contactEmail}
+                            onChange={onHandleChangeEmail}
                             onBlur={handleOnBlur}
                             required
                         />
@@ -108,6 +133,8 @@ export default function ContactPage() {
                             style={styles.textarea}
                             rows={5}
                             aria-describedby="required"
+                            value={contactMessage}
+                            onChange={onHandleChangeMessage}
                             onBlur={handleOnBlur}
                             required
                         />
@@ -128,7 +155,8 @@ export default function ContactPage() {
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
-                            <p>Feature not yet fully implemented</p>
+                            <p className="text-black">Feature not yet fully implemented. Instead,</p>
+                            <label className="text-black">Email me at: </label><a href={`mailto:nathanageronimo@gmail.com?subject=${contactSubject}&body=${contactMessage}`}> nathanageronimo@gmail.com</a>
                         </div>
                         <div className="modal-footer">
                             <button id="button-modal" type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
