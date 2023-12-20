@@ -156,7 +156,7 @@ export default function ContactPage() {
                         </div>
                         <div className="modal-body">
                             <p className="text-black">Feature not yet fully implemented. Instead,</p>
-                            <label className="text-black">Email me at: </label><a href={`mailto:nathanageronimo@gmail.com?subject=${contactSubject}&body=${contactMessage}`}> nathanageronimo@gmail.com</a>
+                            <label className="text-black">Email me at: </label><a href={`mailto:nathanageronimo@gmail.com`}> nathanageronimo@gmail.com</a>
                         </div>
                         <div className="modal-footer">
                             <button id="button-modal" type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
