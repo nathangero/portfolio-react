@@ -48,15 +48,15 @@ export default function ResumePage() {
         return <li key={index} className="list-group-item">{skill}</li>
     })
 
-    const resumeUrl = "https://drive.google.com/file/d/1_viEtvupcaMoGpP5IhfqBNGa65fml7Rp/view?usp=drive_link";
+    const googleDriveFileId = "1_viEtvupcaMoGpP5IhfqBNGa65fml7Rp";
+    const resumeUrl = `https://drive.google.com/file/d/${googleDriveFileId}/view?usp=drive_link`;
 
 
     const onClickDownloadResume = () => {
-        console.log("@onClickDownloadResume")
+        const downloadLink = `https://drive.google.com/uc?export=download&id=${googleDriveFileId}`;
 
-        const resumePath = "/images/nathan_resume.pdf";
         const tempLink = document.createElement("a"); // Create a clickable element
-        tempLink.href = resumePath;
+        tempLink.href = downloadLink;
         tempLink.download = "Nathan's Resume.pdf"; // Set name for file
 
         document.body.appendChild(tempLink);
