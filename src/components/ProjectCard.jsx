@@ -1,4 +1,4 @@
-
+import PropTypes from "prop-types";
 
 export default function ProjectCard(props) {
 
@@ -34,4 +34,15 @@ export default function ProjectCard(props) {
             </div>
         </div>
     )
+}
+
+ProjectCard.propTypes = {
+    project: PropTypes.shape({
+        image: PropTypes.string,
+        alt: PropTypes.string,
+        name: PropTypes.string,
+        description: PropTypes.string,
+        deploy_link: PropTypes.string,
+        repo_link: PropTypes.string,
+    })
 }

@@ -15,7 +15,7 @@ export default function AboutMePage() {
     return (
         <section className=" fs-4">
             <div className="d-flex justify-content-center">
-                <img src="/images/selfie-aug23.jpg" style={styles.profilePic} />
+                <img src="/images/selfie-aug23.jpg" style={styles.profilePic} alt="nathan's face profile picture"/>
             </div>
             
             <div id="about-me-text" className="p-3">
@@ -28,7 +28,7 @@ export default function AboutMePage() {
                 </p>
                 <br />
                 <p>
-                    Please check out my work <Link className='text-primary' to={'/projects'}>here</Link> or contact me <Link className='text-primary' to={'/contact'}>here</Link>, and thank you for visiting!
+                    Please check out my work <Link className='text-primary' to={'/projects'} >here</Link> or contact me <Link className='text-primary' to={'/contact'}>here</Link>, and thank you for visiting!
                 </p>
             </div>
         </section>
