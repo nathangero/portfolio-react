@@ -6,7 +6,7 @@ This is an updated version of [my portfolio](https://nathangero.github.io/my-por
 
 This site is mobile **and** dark theme friendly!
 
-You can view my portfolio here: [https://glittery-puffpuff-5e401e.netlify.app/](https://glittery-puffpuff-5e401e.netlify.app/)
+You can view my portfolio here: [https://nathan-geronimo-porfolio.netlify.app/](https://nathan-geronimo-porfolio.netlify.app/)
 
 ## Image
 
