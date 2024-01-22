@@ -1,6 +1,7 @@
 .project-button {
   background-color: var(--button-background-color);
   color: white;
+  border-color: var(--button-background-color);
 }
 
 .project-card {
