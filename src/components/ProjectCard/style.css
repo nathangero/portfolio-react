@@ -1,0 +1,29 @@
+.project-button {
+  background-color: var(--button-background-color);
+  color: white;
+}
+
+.project-card {
+  height: 100%;
+}
+
+.project-image {
+  object-fit: cover;
+  height: 100%;
+}
+
+@media screen and (max-width: 922px) {
+  .project-card {
+    height: 100%;
+    width: 93%;
+    margin: 0 auto;
+  }
+}
+
+/* @media screen and (max-width: 478px) {
+  .project-card {
+    height: 100%;
+    width: 93%;
+    margin: 0 auto;
+  }
+} */

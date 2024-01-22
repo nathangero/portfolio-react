@@ -1,3 +1,7 @@
+:root {
+  --button-background-color: #2baeff;
+}
+
 .card {
   border: 2px solid black;
 }
