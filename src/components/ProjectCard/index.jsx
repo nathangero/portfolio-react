@@ -14,8 +14,8 @@ export default function ProjectCard(props) {
                 <p className="card-text text-center">{project.description}</p>
 
                 <div className="d-flex justify-content-around">
-                    <a target="_blank" rel="noreferrer" href={project.deploy_link} className="btn btn-primary project-button">Website</a>
                     <a target="_blank" rel="noreferrer" href={project.repo_link} className="btn btn-primary project-button">Code Repo</a>
+                    <a target="_blank" rel="noreferrer" href={project.deploy_link} className="btn btn-primary project-button">Website</a>
                 </div>
             </div>
         </div>
