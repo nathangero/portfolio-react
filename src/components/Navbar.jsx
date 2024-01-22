@@ -21,8 +21,8 @@ export default function Navbar() {
 
     useEffect(() => {
         // Init the bootstrap offcanvas sidemenu
-        const sidemenu = document.getElementById("sidemenu");
-        setSideMenu(new Offcanvas(sidemenu));
+        const menu = document.getElementById("sidemenu");
+        setSideMenu(new Offcanvas(menu));
     }, [])
 
     /**
@@ -32,7 +32,6 @@ export default function Navbar() {
     const onClickLink = (link) => {
         switch (link) {
             case NAV_LINKS.ABOUT_ME:
-                // console.log("set about me to active")
                 document.getElementById('nav-aboutme').className = "nav-link active";
                 document.getElementById('nav-portfolio').className = "nav-link";
                 document.getElementById('nav-contact').className = "nav-link";
@@ -96,10 +95,10 @@ export default function Navbar() {
 
 
     return (
-        <nav className='navbar navbar-expand-md mb-3' style={styles.navbar}>
+        <nav className='navbar navbar-expand-md navbar-dark mb-3' style={styles.navbar}>
             <div className='container-fluid'>
                 <Link
-                    className='navbar-brand fs-1'
+                    className='navbar-brand fs-1 text-white'
                     to={'/'}
                     onClick={() => onClickLink(NAV_LINKS.ABOUT_ME)}
                 >

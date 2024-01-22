@@ -15,8 +15,25 @@
   height: "100%";
 }
 
+.nav-link,
+.nav-link.active {
+  color: white !important;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  font-size: 30px;
+}
+
 .offcanvas {
   max-width: 75%;
+}
+
+.offcanvas {
+  background-color: gray;
 }
 
 .project-title {
@@ -46,5 +63,13 @@
   label,
   .card-title {
     color: white;
+  }
+
+  .btn-close {
+    background-color: white;
+  }
+
+  .offcanvas {
+    background-color: #212121;
   }
 }
