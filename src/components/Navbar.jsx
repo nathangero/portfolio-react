@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Offcanvas } from 'bootstrap/dist/js/bootstrap.min.js';
 
 export default function Navbar() {
     const NAV_LINKS = {
@@ -13,8 +14,16 @@ export default function Navbar() {
         navbar: {
             "height": "75px",
             "backgroundColor": "#2baeff"
-        }
+        },
     }
+
+    const [sideMenu, setSideMenu] = useState(null);
+
+    useEffect(() => {
+        // Init the bootstrap offcanvas sidemenu
+        const sidemenu = document.getElementById("sidemenu");
+        setSideMenu(new Offcanvas(sidemenu));
+    }, [])
 
     /**
      * Sets the active tab 
@@ -51,6 +60,8 @@ export default function Navbar() {
                 document.getElementById('nav-resume').className = "nav-link active";
                 break;
         }
+
+        if (sideMenu) sideMenu.toggle(); // Only toggle off the sidemenu if it's rendered already
     }
 
 
@@ -104,7 +115,7 @@ export default function Navbar() {
                         <button id='button-close-offcanvas' type="button" className="btn-close fs-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
 
-                    <div className='offcanvas-body'>
+                    <div id="sidemenu" className='offcanvas-body'>
                         <ul className="navbar-nav nav-underline fs-5 justify-content-end flex-grow-1 pe-3">
                             <li>
                                 <Link
@@ -116,23 +127,13 @@ export default function Navbar() {
                                 </Link>
                             </li>
 
-                                <li>
-                                    <Link
-                                        id='nav-portfolio'
-                                        to={'/projects'}
-                                        onClick={() => onClickLink(NAV_LINKS.PORTFOLIO)}
-                                    >
-                                        Projects
-                                    </Link>
-                                </li>
-
                             <li>
                                 <Link
-                                    id='nav-contact'
-                                    to={'/contact'}
-                                    onClick={() => onClickLink(NAV_LINKS.CONTACT)}
+                                    id='nav-portfolio'
+                                    to={'/projects'}
+                                    onClick={() => onClickLink(NAV_LINKS.PORTFOLIO)}
                                 >
-                                    Contact Me
+                                    Projects
                                 </Link>
                             </li>
 
@@ -143,6 +144,16 @@ export default function Navbar() {
                                     onClick={() => onClickLink(NAV_LINKS.RESUME)}
                                 >
                                     Resume
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link
+                                    id='nav-contact'
+                                    to={'/contact'}
+                                    onClick={() => onClickLink(NAV_LINKS.CONTACT)}
+                                >
+                                    Contact Me
                                 </Link>
                             </li>
                         </ul>
