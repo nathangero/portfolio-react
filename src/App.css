@@ -15,6 +15,10 @@
   height: "100%";
 }
 
+.offcanvas {
+  max-width: 75%;
+}
+
 .project-title {
   width: 95%;
   margin: 0 auto;

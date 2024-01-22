@@ -14,12 +14,13 @@ export default function Navbar() {
         navbar: {
             "height": "75px",
             "backgroundColor": "#2baeff"
-        }
+        },
     }
 
     const [sideMenu, setSideMenu] = useState(null);
 
     useEffect(() => {
+        // Init the bootstrap offcanvas sidemenu
         const sidemenu = document.getElementById("sidemenu");
         setSideMenu(new Offcanvas(sidemenu));
     }, [])
@@ -60,7 +61,7 @@ export default function Navbar() {
                 break;
         }
 
-        if (sideMenu) sideMenu.toggle();
+        if (sideMenu) sideMenu.toggle(); // Only toggle off the sidemenu if it's rendered already
     }
 
 
