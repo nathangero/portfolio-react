@@ -1,9 +1,9 @@
-import Navbar from './Navbar.jsx'
+import Navbar from "./Navbar.jsx";
 
 export default function Header() {
-    return (
-        <header>
-            <Navbar />
-        </header>
-    )
+  return (
+    <header>
+      <Navbar />
+    </header>
+  );
 }
