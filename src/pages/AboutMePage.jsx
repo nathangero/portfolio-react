@@ -13,12 +13,14 @@ export default function AboutMePage() {
 
   return (
     <section className=" fs-4">
-      <div className="d-flex justify-content-center">
+      <div className="d-flex flex-column align-items-center">
         <img
           src="/images/selfie-aug23.jpg"
           style={styles.profilePic}
           alt="nathan's face profile picture"
         />
+
+        <h1 className="fs-3">Software Engineer</h1>
       </div>
 
       <div id="about-me-text" className="p-3">
@@ -61,11 +63,11 @@ export default function AboutMePage() {
           <Link className="text-primary" to={"/projects"}>
             here
           </Link>{" "}
-          or contact me{" "}
+          {/* or contact me{" "}
           <Link className="text-primary" to={"/contact"}>
             here
-          </Link>
-          , and thank you for visiting!
+          </Link> */}
+          and thank you for visiting!
         </p>
       </div>
     </section>

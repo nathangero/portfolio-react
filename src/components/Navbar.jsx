@@ -34,29 +34,29 @@ export default function Navbar() {
       case NAV_LINKS.ABOUT_ME:
         document.getElementById("nav-aboutme").className = "nav-link active";
         document.getElementById("nav-portfolio").className = "nav-link";
-        document.getElementById("nav-contact").className = "nav-link";
         document.getElementById("nav-resume").className = "nav-link";
+        // document.getElementById("nav-contact").className = "nav-link";
         break;
 
       case NAV_LINKS.PORTFOLIO:
         document.getElementById("nav-aboutme").className = "nav-link";
         document.getElementById("nav-portfolio").className = "nav-link active";
-        document.getElementById("nav-contact").className = "nav-link";
         document.getElementById("nav-resume").className = "nav-link";
+        // document.getElementById("nav-contact").className = "nav-link";
         break;
 
       case NAV_LINKS.CONTACT:
         document.getElementById("nav-aboutme").className = "nav-link";
         document.getElementById("nav-portfolio").className = "nav-link";
-        document.getElementById("nav-contact").className = "nav-link active";
         document.getElementById("nav-resume").className = "nav-link";
+        // document.getElementById("nav-contact").className = "nav-link active";
         break;
 
       case NAV_LINKS.RESUME:
         document.getElementById("nav-aboutme").className = "nav-link";
         document.getElementById("nav-portfolio").className = "nav-link";
-        document.getElementById("nav-contact").className = "nav-link";
         document.getElementById("nav-resume").className = "nav-link active";
+        // document.getElementById("nav-contact").className = "nav-link";
         break;
     }
 
@@ -166,7 +166,7 @@ export default function Navbar() {
                 </Link>
               </li>
 
-              <li>
+              {/* <li>
                 <Link
                   id="nav-contact"
                   to={"/contact"}
@@ -174,7 +174,7 @@ export default function Navbar() {
                 >
                   Contact Me
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
