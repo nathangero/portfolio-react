@@ -10,7 +10,7 @@ export default function ProjectCard(props) {
   return (
     <div className="card project-card" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
       <div className="project-image">
-        <img src={project.image} className="card-img-top" alt={project.alt} />
+        <img src={project.image} className={`card-img-top ${isHovered ? "show" : ""}`} alt={project.alt} />
         <div className={`d-flex justify-content-around project-button-container`}>
           <a
             target="_blank"
