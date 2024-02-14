@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Offcanvas } from "bootstrap/dist/js/bootstrap.min.js";
 
 export default function Navbar() {
   const NAV_LINKS = {
@@ -17,13 +16,13 @@ export default function Navbar() {
     },
   };
 
-  const [sideMenu, setSideMenu] = useState(null);
+  // Set the current navbar tab to "active" only on page startup depending where the user is.
+  const location = useLocation().pathname;
+
 
   useEffect(() => {
-    // Init the bootstrap offcanvas sidemenu
-    const menu = document.getElementById("sidemenu");
-    setSideMenu(new Offcanvas(menu));
-  }, []);
+    onClickLink(location);
+  }, [location]);
 
   /**
    * Sets the active tab
@@ -60,37 +59,7 @@ export default function Navbar() {
         break;
     }
 
-    if (sideMenu) sideMenu.toggle(); // Only toggle off the sidemenu if it's rendered already
   };
-
-  // Set the current navbar tab to "active" only on page startup depending where the user is.
-  const location = useLocation().pathname;
-  useEffect(() => {
-    onClickLink(location);
-  }, [location]);
-
-  // Keep track of menu open state
-  const [isMenuOpen, setMenuState] = useState(false);
-  useEffect(() => {
-    // set eventlistener after page has rendered
-    const myOffcanvas = document.getElementById("navbar");
-
-    myOffcanvas.addEventListener("hidden.bs.offcanvas", () => {
-      // console.log("hide menu")
-      setMenuState(false);
-    });
-
-    myOffcanvas.addEventListener("show.bs.offcanvas", () => {
-      // console.log("show menu")
-      setMenuState(true);
-    });
-  }, []);
-
-  // Used to get rid of the odd dimmed screen if offcanvas is dismissed NOT by the close button
-  useEffect(() => {
-    // console.log("toggled isMenuOpen?", isMenuOpen)
-    if (!isMenuOpen) document.getElementById("button-close-offcanvas").click();
-  }, [isMenuOpen]);
 
   return (
     <nav
@@ -135,7 +104,7 @@ export default function Navbar() {
           </div>
 
           <div id="sidemenu" className="offcanvas-body">
-            <ul className="navbar-nav nav-underline fs-5 justify-content-end flex-grow-1 pe-3">
+            <ul className="navbar-nav nav-underline fs-5 justify-content-end flex-grow-1 pe-3" data-bs-dismiss="offcanvas">
               <li>
                 <Link
                   id="nav-aboutme"
@@ -149,7 +118,7 @@ export default function Navbar() {
               <li>
                 <Link
                   id="nav-portfolio"
-                  to={"/projects"}
+                  to={NAV_LINKS.PORTFOLIO}
                   onClick={() => onClickLink(NAV_LINKS.PORTFOLIO)}
                 >
                   Projects
