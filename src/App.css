@@ -29,10 +29,6 @@
 }
 
 .offcanvas {
-  max-width: 75%;
-}
-
-.offcanvas {
   background-color: gray;
 }
 
@@ -56,6 +52,7 @@
     border: 2px solid white;
   }
 
+  h1,
   h2,
   h3,
   h4,
