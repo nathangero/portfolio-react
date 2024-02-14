@@ -1,7 +1,23 @@
-.project-button {
+.project-button-container {
+  position: absolute;
+  bottom: 110px;
+  width: 100%;
+  
+}
+
+.project-button.repo,
+.project-button.website {
   background-color: var(--button-background-color);
   color: white;
   border-color: var(--button-background-color);
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+  margin: 0px 10px;
+}
+
+.project-button.repo.show,
+.project-button.website.show {
+  opacity: 1;
 }
 
 .project-card {
@@ -11,6 +27,12 @@
 .project-image {
   object-fit: cover;
   height: 100%;
+  background-color: white;
+}
+
+.card-img-top:hover {
+  opacity: 0.3;
+  transition: opacity 0.15s ease-in-out;
 }
 
 @media screen and (max-width: 922px) {
@@ -18,5 +40,11 @@
     height: 100%;
     width: 93%;
     margin: 0 auto;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .project-image {
+    background-color: black;
   }
 }
