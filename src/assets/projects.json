@@ -1,5 +1,13 @@
 [
     {
+        "name": "Rock, Paper, Scissors, Go!",
+        "deploy_link": "https://rock-paper-scissor-go.firebaseapp.com/",
+        "repo_link": "https://github.com/nathangero/rock-paper-scissor-go",
+        "image": "/images/project_images/rps-go-match.PNG",
+        "alt": "Screenshot showing the UI during a match. Shows the user's choice of rock, paper, or scissors",
+        "description": "Play rock, paper, scissors with anyone online!"
+    },
+    {
         "name": "Readit",
         "deploy_link": "https://project-readit-ae03b3828bf5.herokuapp.com/",
         "repo_link": "https://github.com/flimits/readit",
