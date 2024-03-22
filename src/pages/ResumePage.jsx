@@ -8,7 +8,7 @@ export default function ResumePage() {
     },
   };
 
-  const skills = {
+  const SKILLS = {
     frontend: [
       "Swift",
       "SwiftUI",
@@ -46,21 +46,21 @@ export default function ResumePage() {
     ,
   };
 
-  const frontendItems = skills.frontend.map((skill, index) => {
+  const FRONTEND_ITEMS = SKILLS.frontend.map((skill, index) => {
     return (
       <li key={index} className="list-group-item">
         {skill}
       </li>
     );
   });
-  const backendItems = skills.backend.map((skill, index) => {
+  const BACKEND_ITEMS = SKILLS.backend.map((skill, index) => {
     return (
       <li key={index} className="list-group-item">
         {skill}
       </li>
     );
   });
-  const miscItems = skills.misc.map((skill, index) => {
+  const MISC_ITEMS = SKILLS.misc.map((skill, index) => {
     return (
       <li key={index} className="list-group-item">
         {skill}
@@ -68,11 +68,11 @@ export default function ResumePage() {
     );
   });
 
-  const googleDriveFileId = "1_viEtvupcaMoGpP5IhfqBNGa65fml7Rp";
-  const resumeUrl = `https://drive.google.com/file/d/${googleDriveFileId}/view?usp=drive_link`;
+  const GOOGLE_DRIVE_ID = "1_viEtvupcaMoGpP5IhfqBNGa65fml7Rp";
+  const RESUME_URL = `https://drive.google.com/file/d/${GOOGLE_DRIVE_ID}/view?usp=drive_link`;
 
   const onClickDownloadResume = () => {
-    const downloadLink = `https://drive.google.com/uc?export=download&id=${googleDriveFileId}`;
+    const downloadLink = `https://drive.google.com/uc?export=download&id=${GOOGLE_DRIVE_ID}`;
 
     const tempLink = document.createElement("a"); // Create a clickable element
     tempLink.href = downloadLink;
@@ -86,13 +86,13 @@ export default function ResumePage() {
   return (
     <section className="m-3">
       <h2 className="text-center">
-        Below you&apos;ll find my resume and a list of my skills
+        Here&apos;s my resume and a list of my skills
       </h2>
       <br />
       <div className="d-flex justify-content-center">
         <a
           target="_blank"
-          href={resumeUrl}
+          href={RESUME_URL}
           rel="noreferrer"
           className="btn mx-2"
           style={styles.button}
@@ -121,18 +121,18 @@ export default function ResumePage() {
 
       <div className="row">
         <div className="col-sm">
-          <h4>Front-End:</h4>
-          <ul className="list-group mb-3">{frontendItems}</ul>
+          <h4>Frontend:</h4>
+          <ul className="list-group mb-3">{FRONTEND_ITEMS}</ul>
         </div>
 
         <div className="col-sm">
-          <h4>Back-End:</h4>
-          <ul className="list-group mb-3">{backendItems}</ul>
+          <h4>Backend:</h4>
+          <ul className="list-group mb-3">{BACKEND_ITEMS}</ul>
         </div>
 
         <div className="col-sm">
           <h4>Misc:</h4>
-          <ul className="list-group">{miscItems}</ul>
+          <ul className="list-group">{MISC_ITEMS}</ul>
         </div>
       </div>
     </section>
