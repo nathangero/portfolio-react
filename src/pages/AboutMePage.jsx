@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
 export default function AboutMePage() {
+  const EMAIL = "nathanageronimo@gmail.com";
+
   const styles = {
     profilePic: {
       borderRadius: "100%",
@@ -46,17 +48,17 @@ export default function AboutMePage() {
           </a> */}
           . In Dec 2023, I just finished a coding bootcamp through UC Berkeley
           Extension on learning how to be a full-stack MERN web developer using
-          the following technologies: MongoDB, Express, React, Node.js, REST,
+          the following technologies: MongoDB, Express, React.js, Node.js, RESTful Api,
           GraphQL, and MySQL.
         </p>
-        <br />
+
         <p>
           In my freetime I like to try different food places around the Bay Area
           with my loving partner, hangout with my friends whether its through
           Discord or IRL, travel to see family, participate in my church
           activities/worship throughout the week, and always thinking of my next passion project.
         </p>
-        <br />
+
         <p>
           Please check out my work{" "}
           <Link className="text-primary" to={"/projects"}>
@@ -69,19 +71,27 @@ export default function AboutMePage() {
           and thank you for visiting!
         </p>
 
-        <p>
-          In fact, check out my most recent project,  <a target="_blank" href="https://rock-paper-scissor-go.firebaseapp.com/" rel="noreferrer" ><b>Rock, Paper, Scissors Go!</b></a>
-          <br />
-          You can play Rock, Paper, Scissors online with anyone! It&apos;s designed to allow anyone play, whether they have an account or not.
-          You can play with random players, or make a private lobby and invite someone you know.
-          <br />
-          The technologies used are:
+        <div className="recent-work">
+          <p>
+            In fact, check out my most recent project,  <a target="_blank" href="https://rock-paper-scissor-go.firebaseapp.com/" rel="noreferrer" ><b>Rock, Paper, Scissors Go!</b></a>
+            <br />
+            You can play Rock, Paper, Scissors online with anyone! It&apos;s designed to allow anyone play, whether they have an account or not.
+            You can play with random players, or make a private lobby and invite someone you know.
+            <br />
+          </p>
+
+          <label>The technologies used are:</label>
           <ul>
             <li>React.js</li>
             <li>TypeScript</li>
             <li>Bootstrap</li>
             <li>Google Firebase</li>
           </ul>
+        </div>
+
+        <label>-----</label>
+        <p>
+          You can contact me at <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
         </p>
       </div>
     </section>
