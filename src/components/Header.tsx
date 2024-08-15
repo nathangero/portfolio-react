@@ -1,15 +1,28 @@
 import { useState } from "react";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const scrollToSection = (id: string) => {
+  const scrollToSection = async (id: string) => {
+    // If not on the home page, navigate to home and go to the desired section
+    if (location.pathname != "/") {
+      navigate("/");
+
+      // Having this pause will give enough time for the browser to find the section id
+      const pause = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms));
+      await pause(0);
+    }
+
     const element = document.getElementById(id);
     const offset = 60; // Height of the navbar 
+
     if (element) {
       setIsOpen(false); // Always close the menu
       const elementPosition = element.getBoundingClientRect().top;
@@ -29,7 +42,12 @@ export default function Header() {
           <div className="hidden md:flex space-x-4">
             <button onClick={() => scrollToSection('about-me')} className="text-white hover:text-gray-300">About</button>
             <button onClick={() => scrollToSection('projects')} className="text-white hover:text-gray-300">Projects</button>
-            <a href="#" className="text-white hover:text-gray-300">Resume</a>
+            <NavLink
+              to={"/resume"}
+              className="text-white hover:text-gray-300"
+            >
+              Resume
+            </NavLink>
           </div>
           <div className="md:hidden">
             <button onClick={toggleMenu} className="text-white focus:outline-none">
@@ -43,10 +61,16 @@ export default function Header() {
           <div className="md:hidden mt-2 space-y-2">
             <button onClick={() => scrollToSection('about-me')} className="block text-white hover:text-gray-300">About</button>
             <button onClick={() => scrollToSection('projects')} className="block text-white hover:text-gray-300">Projects</button>
-            <a href="#" className="block text-white hover:text-gray-300">Resume</a>
+            <NavLink
+              to={"/resume"}
+              className="block text-white hover:text-gray-300"
+              onClick={() => setIsOpen(false)}
+            >
+              Resume
+            </NavLink>
           </div>
         )}
-      </nav>
+      </nav >
     </>
   )
 }
