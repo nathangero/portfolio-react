@@ -3,7 +3,7 @@ export default function Footer() {
 
   return (
     <>
-      <div className="bottom-0 bg-gray-900 text-white flex justify-center py-3">
+      <div className="bottom-0 bg-gray-900 text-white flex justify-center py-4">
         <div className="mx-10">
           <a
             target="_blank"
