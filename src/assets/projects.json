@@ -8,6 +8,14 @@
         "description": "Play rock, paper, scissors with anyone online!"
     },
     {
+        "name": "Fijo Rideshare & Delivery",
+        "link_deploy": "https://drive.google.com/file/d/1pBw_phG9GilcwY28z4KHpo6mtCdfC42A/view?usp=drive_link",
+        "link_repo": "",
+        "image": "/images/project_images/fijo-rider.jpg",
+        "alt": "screenshot of the Rider app looking at the route going from the pickup location to the drop off location",
+        "description": "A rideshare platform where you can set the price and choose your driver."
+    },
+    {
         "name": "Readit",
         "link_deploy": "https://project-readit-ae03b3828bf5.herokuapp.com/",
         "link_repo": "https://github.com/flimits/readit",
@@ -21,7 +29,7 @@
         "link_repo": "https://github.com/nathangero/dnd-save-data",
         "image": "/images/project_images/dnd-save-data-example.PNG",
         "alt": "showing the character page in the D&D website",
-        "description": "A place to keep track of your D&D 5e characters"
+        "description": "A place to edit and keep track of your D&D 5e characters"
     },
     {
         "name": "play.join()",
@@ -32,20 +40,12 @@
         "description": "A site to find other gamers and party up"
     },
     {
-        "name": "A Tech Blog",
-        "link_deploy": "https://tech-blog-nathangero-142ac22ce678.herokuapp.com",
-        "link_repo": "https://github.com/nathangero/tech-blog",
-        "image": "/images/project_images/tech-blog.PNG",
-        "alt": "homepage for a CMS-style blog",
-        "description": "A place to blog about tech"
-    },
-    {
         "name": "J.A.T.E (PWA)",
         "link_deploy": "https://text-editor-nag.onrender.com",
         "link_repo": "https://github.com/nathangero/tech-blog",
         "image": "/images/project_images/jate-pwa.PNG",
         "alt": "progressive web app of Just Another Text Editor",
-        "description": "Just Another Text Editor to edit text"
+        "description": "Text editor that's also a PWA"
     },
     {
         "name": "Weather Dashboard",

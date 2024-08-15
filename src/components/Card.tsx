@@ -3,15 +3,21 @@ export default function Card({ alt, description, link_deploy, image, name, link_
 
   return (
     <>
-      <div className="rounded border bg-gray-800">
-        <img src={image} alt={alt} className="h-32 w-auto mx-auto" />
+      <div className="rounded-xl border-2 border-white bg-gray-800 card-size flex flex-col">
+        <img src={image} alt={alt} className="rounded-tl-lg rounded-tr-lg aspect-auto mx-auto project-image" />
         <hr />
-        <div id="card-bottom" className="p-2">
+        <div id="card-bottom" className="p-2 flex flex-col flex-grow">
           <p className="text-3xl text-center mb-3">{name}</p>
-          <p className="text-center">{description}</p>
-          <div className="flex justify-around my-2">
-            <a href={link_repo} target="_blank" className="rounded border bg-indigo-500 text-white px-3 py-2" rel="noreferrer">GitHub Repo</a>
-            <a href={link_deploy} target="_blank" className="rounded border bg-indigo-500 text-white px-3 py-2" rel="noreferrer">Website</a>
+          <p className="text-center mb-5">{description}</p>
+          <div className="flex justify-around mt-auto mb-2">
+            {link_repo && (
+              <a href={link_repo} target="_blank" className="rounded border bg-indigo-500 text-white px-3 py-2" rel="noreferrer">
+                GitHub Repo
+              </a>
+            )}
+            <a href={link_deploy} target="_blank" className="rounded border bg-indigo-500 text-white px-3 py-2" rel="noreferrer">
+              Website
+            </a>
           </div>
         </div>
       </div>
