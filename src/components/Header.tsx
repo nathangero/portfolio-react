@@ -61,7 +61,7 @@ export default function Header() {
           </div>
         </div>
         {isOpen && (
-          <div className="md:hidden mt-2 space-y-2">
+          <div className="md:hidden mt-2 space-y-2 flex flex-col items-center">
             <button onClick={() => scrollToSection('about-me')} className="block text-white hover:text-gray-300">About</button>
             <button onClick={() => scrollToSection('projects')} className="block text-white hover:text-gray-300">Projects</button>
             <NavLink
