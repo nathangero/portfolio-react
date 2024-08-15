@@ -11,7 +11,7 @@ export default function Projects() {
         {ProjectData.map((project, index) => {
           return (
             <div key={index} className="m-3">
-              <Card project={project} />
+              <Card {...project} />
             </div>
           )
         })
