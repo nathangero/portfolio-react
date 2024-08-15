@@ -15,18 +15,21 @@ export default function Header() {
     if (location.pathname != "/") {
       navigate("/");
 
-      // Having this pause will give enough time for the browser to find the section id
+      // Having this pause will give enough time for the browser to find the section id after changing pages
       const pause = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms));
       await pause(0);
     }
 
+    // See if the element exists on the page
     const element = document.getElementById(id);
-    const offset = 60; // Height of the navbar 
 
     if (element) {
       setIsOpen(false); // Always close the menu
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - offset;
+
+      const navbarHeight = document.querySelector('nav')?.getBoundingClientRect().height || 0; // Get the navbar height
+      const elementPosition = element.getBoundingClientRect().top; // Get the element's topmost part
+      const offsetPosition = elementPosition + window.scrollY - navbarHeight; // Calculate the offset
+
       window.scrollTo({
         top: offsetPosition,
         behavior: "smooth"
