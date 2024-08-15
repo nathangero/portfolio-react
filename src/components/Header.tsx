@@ -7,14 +7,28 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    const offset = 60; // Height of the navbar 
+    if (element) {
+      setIsOpen(false); // Always close the menu
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - offset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <>
-      <nav className="sticky top-0 bg-blue-500 p-4 shadow-md">
+      <nav className="sticky top-0 bg-blue-500 p-4 shadow-md z-10">
         <div className="container mx-auto flex justify-between items-center">
           <div className="text-white text-xl font-bold">Nathan Geronimo</div>
           <div className="hidden md:flex space-x-4">
-            <a href="#" className="text-white hover:text-gray-300">About</a>
-            <a href="#" className="text-white hover:text-gray-300">Projects</a>
+            <button onClick={() => scrollToSection('about-me')} className="text-white hover:text-gray-300">About</button>
+            <button onClick={() => scrollToSection('projects')} className="text-white hover:text-gray-300">Projects</button>
             <a href="#" className="text-white hover:text-gray-300">Resume</a>
           </div>
           <div className="md:hidden">
@@ -26,9 +40,9 @@ export default function Header() {
           </div>
         </div>
         {isOpen && (
-          <div className="md:hidden flex align-middle mt-2 space-y-2">
-            <a href="#" className="block text-white hover:text-gray-300">About</a>
-            <a href="#" className="block text-white hover:text-gray-300">Projects</a>
+          <div className="md:hidden mt-2 space-y-2">
+            <button onClick={() => scrollToSection('about-me')} className="block text-white hover:text-gray-300">About</button>
+            <button onClick={() => scrollToSection('projects')} className="block text-white hover:text-gray-300">Projects</button>
             <a href="#" className="block text-white hover:text-gray-300">Resume</a>
           </div>
         )}
