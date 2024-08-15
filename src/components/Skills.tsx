@@ -6,12 +6,7 @@ export default function Skills() {
 
   return (
     <>
-      <section className="pt-3">
-        <div className="text-center">
-          <h3 className="underline text-3xl">Skills</h3>
-        </div>
-
-        <br />
+      <div className="pt-3">
 
         <div className="flex flex-wrap">
           <div className="sm:w-1/3 w-full max-md:mb-3">
@@ -29,7 +24,7 @@ export default function Skills() {
             <SkillList list={misc} />
           </div>
         </div>
-      </section>
+      </div>
 
     </>
   )

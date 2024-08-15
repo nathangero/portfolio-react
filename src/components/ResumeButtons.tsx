@@ -20,18 +20,18 @@ export default function ResumeButtons() {
     <>
 
       <br />
-      <div className="flex justify-center">
+      <div className="flex max-sm:flex-col items-center max-w-fit mx-auto">
         <a
           target="_blank"
           href={RESUME_URL}
           rel="noreferrer"
-          className="btn mx-2"
+          className="flex justify-center rounded bg-indigo-500 text-center text-xl p-2 mx-3 my-2"
           type="button"
         >
           View My Resume
         </a>
         <button
-          className="btn mx-2"
+          className="flex justify-center rounded bg-indigo-500 text-center text-xl p-2 mx-3 my-2"
           type="button"
           onClick={onClickDownloadResume}
         >

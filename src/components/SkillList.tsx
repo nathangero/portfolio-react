@@ -8,8 +8,8 @@ export default function SkillList({ list }: SkillListProps) {
         {list.map((skill, index) => {
           return (
             <>
-              <li key={index} className="text-black my-2">
-                <p className="ml-5">{skill}</p>
+              <li key={index} className="max-md:text-center text-black my-2">
+                <p className="lg:ml-5">{skill}</p>
               </li>
             </>
           )
