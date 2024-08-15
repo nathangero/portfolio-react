@@ -2,6 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.list-separator {
+  list-style-type: none;
+  /* Remove default bullet points */
+  padding-left: 0;
+  /* Remove default padding */
+}
+
+.list-separator li {
+  position: relative;
+  /* Ensure that the pseudo-element is positioned relative to the li */
+  padding-bottom: 0.5rem;
+  /* Space between the text and the line */
+}
+
+.list-separator li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  /* Thickness of the separator line */
+  background-color: currentColor;
+  /* Use the text color */
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
