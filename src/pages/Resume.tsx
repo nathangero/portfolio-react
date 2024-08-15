@@ -1,9 +1,12 @@
+import Skills from "../components/Skills";
 
 export default function Resume() {
 
   return (
     <>
-      <h1>Resume goes here</h1>
+      <div className="bg-gray-800 text-white">
+        <Skills />
+      </div>
     </>
   )
 }
