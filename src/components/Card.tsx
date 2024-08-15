@@ -8,8 +8,8 @@ export default function Card({ alt, description, link_deploy, image, name, link_
         <hr />
         <div id="card-bottom" className="p-2 flex flex-col flex-grow">
           <p className="text-3xl text-center mb-3">{name}</p>
-          <p className="text-center mb-5">{description}</p>
-          <div className="flex justify-around mt-auto mb-2">
+          <p className="text-center text-lg mb-5">{description}</p>
+          <div className="flex justify-around mt-auto">
             {link_repo && (
               <a href={link_repo} target="_blank" className="rounded border bg-indigo-500 text-white px-3 py-2" rel="noreferrer">
                 GitHub Repo

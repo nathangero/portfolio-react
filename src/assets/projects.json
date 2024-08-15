@@ -21,7 +21,7 @@
         "link_repo": "https://github.com/flimits/readit",
         "image": "/images/project_images/readit_home_page.PNG",
         "alt": "screenshot of the ReadIt homepage showing a few posts with titles, content, tags, and applauds",
-        "description": "A microblogging site to share your thoughts."
+        "description": "A microblogging site to share your thoughts and interact with others."
     },
     {
         "name": "D&D Save Data",
@@ -45,7 +45,7 @@
         "link_repo": "https://github.com/nathangero/tech-blog",
         "image": "/images/project_images/jate-pwa.PNG",
         "alt": "progressive web app of Just Another Text Editor",
-        "description": "Text editor that's also a PWA"
+        "description": "An online text editor that's also a PWA"
     },
     {
         "name": "Weather Dashboard",
