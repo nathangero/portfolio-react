@@ -1,4 +1,5 @@
 import { frontend, backend, misc } from "../assets/skills.json";
+import SkillList from "./SkillList";
 
 export default function Skills() {
 
@@ -77,17 +78,17 @@ export default function Skills() {
         <div className="flex flex-wrap">
           <div className="sm:w-1/3 w-full">
             <h4>Frontend:</h4>
-            <ul className="list-disc mb-3">{FRONTEND_ITEMS}</ul>
+            <SkillList list={frontend} />
           </div>
 
           <div className="sm:w-1/3 w-full">
             <h4>Backend:</h4>
-            <ul className="list-disc mb-3">{BACKEND_ITEMS}</ul>
+            <SkillList list={backend} />
           </div>
 
           <div className="sm:w-1/3 w-full">
             <h4>Misc:</h4>
-            <ul className="list-disc">{MISC_ITEMS}</ul>
+            <SkillList list={misc} />
           </div>
         </div>
       </section>
