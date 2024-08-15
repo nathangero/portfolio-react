@@ -3,7 +3,9 @@ export default function Home() {
 
   return (
     <>
-      <h1>Hello</h1>
+      <section className="dark bg-gray-800 text-white min-h-lvh">
+        <h1>Hello</h1>
+      </section>
 
     </>
   )

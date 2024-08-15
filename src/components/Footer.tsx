@@ -3,7 +3,9 @@ export default function Footer() {
 
   return (
     <>
-      Footer
+      <div className="sticky bg-gray-900 text-white">
+        Footer
+      </div>
     </>
   )
 }
