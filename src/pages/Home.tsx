@@ -4,7 +4,7 @@ export default function Home() {
 
   return (
     <>
-      <section id="about-me" className="dark bg-gray-800 text-white min-h-lvh relative">
+      <section id="about-me" className="dark bg-gray-800 text-white pb-5">
         <AboutMe />
       </section>
 
