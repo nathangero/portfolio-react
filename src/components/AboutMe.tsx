@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 
 export default function AboutMe() {
   const EMAIL = "nathanageronimo@gmail.com";
@@ -80,7 +81,10 @@ export default function AboutMe() {
           <div className="text-center">
             <label>----------------</label>
             <p>
-              You can contact me at <a href={`mailto:${EMAIL}`} className="max-md:text-xl text-blue-500"><b>{EMAIL}</b></a>
+              Contact me at <a href={`mailto:${EMAIL}`} className="max-md:text-2xl text-blue-500 font-bold mb-3">{EMAIL}</a>
+            </p>
+            <p>
+              View my resume <NavLink to={"/resume"} className="max-md:text-2xl text-blue-500 font-bold">here</NavLink>
             </p>
           </div>
         </div>

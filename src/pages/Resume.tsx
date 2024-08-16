@@ -1,7 +1,13 @@
+import { useEffect } from "react";
 import ResumeButtons from "../components/ResumeButtons";
 import Skills from "../components/Skills";
 
 export default function Resume() {
+
+  useEffect(() => {
+    // Scroll window to top when going to this page
+    window.scrollTo(0, 0);
+  }, [])
 
   return (
     <>
