@@ -12,8 +12,7 @@ export default function AboutMe() {
     let yearsPassed = today.getFullYear() - startDate.getFullYear();
 
     // Adjust for months if the start date month is later in the year than today
-    if (today.getMonth() < startDate.getMonth() ||
-      (today.getMonth() === startDate.getMonth() && today.getDate() < startDate.getDate())) {
+    if (today.getMonth() < startDate.getMonth() || (today.getMonth() === startDate.getMonth() && today.getDate() < startDate.getDate())) {
       yearsPassed--;
     }
 
