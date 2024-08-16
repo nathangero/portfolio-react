@@ -1,22 +1,31 @@
+import { NavLink } from "react-router-dom";
 
 export default function AboutMe() {
   const EMAIL = "nathanageronimo@gmail.com";
 
+  /**
+   * Calcuate the amount of years that have passed since I started programming professionally
+   * @returns Number of years that have passed.
+   */
+  const calcYears = (): number => {
+    const today = new Date();
+    const startDate = new Date('2019-09-01'); // Start date in September 2019
+    let yearsPassed = today.getFullYear() - startDate.getFullYear();
+
+    // Adjust for months if the start date month is later in the year than today
+    if (today.getMonth() < startDate.getMonth() || (today.getMonth() === startDate.getMonth() && today.getDate() < startDate.getDate())) {
+      yearsPassed--;
+    }
+
+    return yearsPassed;
+  }
+
   return (
     <>
-      <img
-        id="profile-picture"
-        src="/images/selfie-aug23.jpg"
-        className="rounded-full h-48 w-48 mx-auto object-cover object-center p-2"
-        alt="nathan's face profile picture"
-      />
-
-      <h1 className="text-center text-5xl">Nathan Geronimo | Software Engineer</h1>
       <br />
-
       <div id="about-me-text" className="text-3xl max-sm:text-2xl leading-snug mx-auto px-52 max-sm:p-3 max-lg:px-20">
         <p>
-          I&apos;m a software engineer with 4+ years of experience in developing robust applications using Swift, React, and Node.js. I specialize in iOS development using SwiftUI, I hold a certificate in full-stack web development using React, Node.js, Express.js, and MongoDB, and I'm currently working on my own video game using the GameMaker engine.
+          I have over {calcYears()} years of experience in developing robust applications using Swift, React, and Node.js. I specialize in iOS development using SwiftUI, I hold a certificate in full-stack web development using React, Node.js, Express.js, and MongoDB, and I'm currently working on my own video game using the GameMaker engine.
         </p>
 
         <br />
@@ -72,7 +81,10 @@ export default function AboutMe() {
           <div className="text-center">
             <label>----------------</label>
             <p>
-              You can contact me at <a href={`mailto:${EMAIL}`} className="max-md:text-xl text-blue-500"><b>{EMAIL}</b></a>
+              Contact me at <a href={`mailto:${EMAIL}`} className="max-md:text-2xl text-blue-500 font-bold mb-3">{EMAIL}</a>
+            </p>
+            <p>
+              View my resume <NavLink to={"/resume"} className="max-md:text-2xl text-blue-500 font-bold">here</NavLink>
             </p>
           </div>
         </div>
