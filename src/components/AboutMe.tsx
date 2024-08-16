@@ -27,7 +27,7 @@ export default function AboutMe() {
         <p>
           I have over {calcYears()} years of experience in developing robust applications using Swift, React, and Node.js. I specialize in iOS development using SwiftUI, I hold a certificate in full-stack web development using React, Node.js, Express.js, and MongoDB, and I'm currently working on my own video game using the GameMaker engine.
         </p>
-        <p className="text-center underline underline-offset-8 mt-4">
+        <p className="text-center underline underline-offset-4 mt-4">
           I'm open to remote or on-site/hybrid work in the San Francisco Bay Area.
         </p>
 
