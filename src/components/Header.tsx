@@ -49,11 +49,11 @@ export default function Header() {
             </NavLink></div>
 
           <div className="hidden md:flex space-x-4">
-            <button onClick={() => scrollToSection('about-me')} className="text-white text-xl hover:text-gray-300">About</button>
-            <button onClick={() => scrollToSection('projects')} className="text-white text-xl hover:text-gray-300">Projects</button>
+            <button onClick={() => scrollToSection('about-me')} className="text-white text-xl hover:text-orange-300">About</button>
+            <button onClick={() => scrollToSection('projects')} className="text-white text-xl hover:text-orange-300">Projects</button>
             <NavLink
               to={"/resume"}
-              className="text-white text-xl hover:text-gray-300"
+              className="text-white text-xl hover:text-orange-300"
             >
               Resume
             </NavLink>
