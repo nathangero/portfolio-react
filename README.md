@@ -26,7 +26,7 @@ You can view my portfolio here: [https://nathan-geronimo-porfolio.netlify.app/](
 
 ## Image of my site
 
-<img src="./src/assets/site-image.png" style="width: 500px; height: auto;" alt="image of the about me section in my site"/>
+![website image](https://github.com/user-attachments/assets/e409d300-4c0f-4edc-8d7b-6d78418eecab)
 
 ## Learning Points
 
