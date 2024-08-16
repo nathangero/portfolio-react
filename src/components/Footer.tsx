@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <>
       <div className="bottom-0 bg-gray-900 text-white flex justify-center py-4">
-        <div className="mx-10">
+        <div id="icon-github" className="mx-10">
           <a
             target="_blank"
             rel="noreferrer"
@@ -24,7 +24,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="mx-10">
+        <div id="icon-linkedin" className="mx-10">
           <a
             target="_blank"
             rel="noreferrer"
@@ -44,7 +44,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="mx-10">
+        <div id="icon-medium" className="mx-10">
           <a
             target="_blank"
             rel="noreferrer"

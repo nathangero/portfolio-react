@@ -4,16 +4,7 @@ export default function AboutMe() {
 
   return (
     <>
-      <img
-        id="profile-picture"
-        src="/images/selfie-aug23.jpg"
-        className="rounded-full h-48 w-48 mx-auto object-cover object-center p-2"
-        alt="nathan's face profile picture"
-      />
-
-      <h1 className="text-center text-5xl">Nathan Geronimo | Software Engineer</h1>
       <br />
-
       <div id="about-me-text" className="text-3xl max-sm:text-2xl leading-snug mx-auto px-52 max-sm:p-3 max-lg:px-20">
         <p>
           I&apos;m a software engineer with 4+ years of experience in developing robust applications using Swift, React, and Node.js. I specialize in iOS development using SwiftUI, I hold a certificate in full-stack web development using React, Node.js, Express.js, and MongoDB, and I'm currently working on my own video game using the GameMaker engine.
