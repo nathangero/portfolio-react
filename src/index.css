@@ -2,9 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+.card-size {
+  height: 590px;
+}
 
 .fit-screen {
   min-height: calc(-141px + 100vh);
+}
+
+.project-image {
+  height: 400px;
+  min-width: auto;
 }
 
 .list-separator {

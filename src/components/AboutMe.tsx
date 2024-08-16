@@ -11,7 +11,7 @@ export default function AboutMe() {
         alt="nathan's face profile picture"
       />
 
-      <h1 className="text-center text-4xl">Nathan Geronimo | Software Engineer</h1>
+      <h1 className="text-center text-5xl">Nathan Geronimo | Software Engineer</h1>
       <br />
 
       <div id="about-me-text" className="text-3xl max-sm:text-2xl leading-snug mx-auto px-52 max-sm:p-3 max-lg:px-20">
@@ -22,7 +22,7 @@ export default function AboutMe() {
         <br />
         <div id="notable-work" className="text-center">
           <label className="underline underline-offset-4">Notable Work</label>
-          <ul className="list-disc text-left ml-10 max-md:ml-5">
+          <ul className="list-disc text-left ml-10">
             <li>
               Between September-December 2019, I built the first working prototype of iOS rideshare apps Fijo Ridshare & Delivery and Fijo Driver, which were officially released the following year. The apps were built fully using the SwiftUI framework.
             </li>
@@ -49,9 +49,9 @@ export default function AboutMe() {
               You can play Rock, Paper, Scissors online with anyone! It&apos;s designed where anyone play, whether they have an account or not. You can play with random players in "for fun" or in "ranked", or make a private lobby and play with a friend.
             </p>
 
-            <div className="max-md:text-center">
+            <div>
               <label>The technologies used are:</label>
-              <ul className="list-disc text-left ml-16 max-sm:ml-28 max-md:ml-26">
+              <ul className="list-disc text-left ml-10">
                 <li>React.js</li>
                 <li>TypeScript</li>
                 <li>Bootstrap</li>
