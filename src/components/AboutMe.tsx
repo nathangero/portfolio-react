@@ -11,17 +11,20 @@ export default function AboutMe() {
         alt="nathan's face profile picture"
       />
 
-      <h1 className="text-center text-5xl">Nathan Geronimo | Software Engineer</h1>
+      <h1 className="text-center text-5xl font-bold">Nathan Geronimo | Software Engineer</h1>
       <br />
 
-      <div id="about-me-text" className="text-3xl max-sm:text-2xl leading-snug mx-auto px-52 max-sm:p-3 max-lg:px-20">
+      <div id="about-me-text" className="text-3xl text-gray-50 max-sm:text-2xl leading-snug mx-auto px-52 max-sm:p-3 max-lg:px-20">
         <p>
           I&apos;m a software engineer with 4+ years of experience in developing robust applications using Swift, React, and Node.js. I specialize in iOS development using SwiftUI, I hold a certificate in full-stack web development using React, Node.js, Express.js, and MongoDB, and I'm currently working on my own video game using the GameMaker engine.
+        </p>
+        <p className="text-center underline underline-offset-8 mt-4">
+          I'm open to remote or on-site/hybrid work in the San Francisco Bay Area.
         </p>
 
         <br />
         <div id="notable-work" className="text-center">
-          <label className="underline underline-offset-4">Notable Work</label>
+          <label className="font-semibold">Notable Work</label>
           <ul className="list-disc text-left ml-10">
             <li>
               Between September-December 2019, I built the first working prototype of iOS rideshare apps Fijo Ridshare & Delivery and Fijo Driver, which were officially released the following year. The apps were built fully using the SwiftUI framework.

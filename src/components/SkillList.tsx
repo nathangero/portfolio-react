@@ -4,7 +4,7 @@ export default function SkillList({ list }: SkillListProps) {
 
   return (
     <>
-      <ul className="text-2xl bg-white rounded-lg list-separator mx-5">
+      <ul className="text-2xl bg-gray-100 rounded-lg list-separator mx-5">
         {list.map((skill, index) => {
           return (
             <>
