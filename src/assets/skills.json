@@ -1,0 +1,36 @@
+{
+  "frontend": [
+    "Swift",
+    "SwiftUI",
+    "HTML5",
+    "CSS3",
+    "Bootstrap",
+    "JavaScript",
+    "TypeScript",
+    "React.js",
+    "Redux",
+    "jQuery",
+    "Handlebars.js"
+  ],
+  "backend": [
+    "Node.js",
+    "Express.js",
+    "RESTful Api",
+    "MySQL",
+    "Sequelize (ORM)",
+    "NoSQL",
+    "MongoDB",
+    "Mongoose (ODM)",
+    "Apollo GraphQL",
+    "JWT"
+  ],
+  "misc": [
+    "Git",
+    "GitHub Actions",
+    "Google Firebase",
+    "MERN stack",
+    "Heroku",
+    "MVVM architecture",
+    "MVC architecture"
+  ]
+}
