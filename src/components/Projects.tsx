@@ -5,7 +5,7 @@ export default function Projects() {
 
   return (
     <>
-      <h2 className="text-4xl max-md:text-3xl text-center">A list of projects I'm proud of!</h2>
+      <h2 className="text-4xl max-md:text-3xl text-center mb-4">A list of projects I'm proud of!</h2>
 
       <div className="flex justify-center">
         <div className="grid auto-cols-auto md:grid-cols-2 lg:grid-cols-3 gap-0 grid-wrapper">

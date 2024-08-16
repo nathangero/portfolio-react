@@ -44,6 +44,7 @@ export default function Header() {
           <div className="text-white text-2xl font-bold">
             <NavLink
               to={"/"}
+              onClick={() => scrollToSection('about-me')}
             >
               Nathan Geronimo
             </NavLink></div>
