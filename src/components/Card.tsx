@@ -4,7 +4,7 @@ export default function Card({ alt, description, link_deploy, image, name, link_
   return (
     <>
       <div className="rounded-xl border-2 border-white bg-gray-800 card-size flex flex-col">
-        <img src={image} alt={alt} className="rounded-tl-lg rounded-tr-lg aspect-auto mx-auto project-image" />
+        <img src={image} alt={alt} className="rounded-tl-lg rounded-tr-lg aspect-auto mx-auto object-cover project-image" />
         <hr />
         <div id="card-bottom" className="p-2 flex flex-col flex-grow">
           <p className="text-3xl text-center mb-3">{name}</p>
