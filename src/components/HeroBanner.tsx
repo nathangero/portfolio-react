@@ -1,6 +1,7 @@
 
 export default function HeroBanner() {
 
+
   return (
     <>
       <section className="relative bg-cover bg-center bg-no-repeat w-auto bg-gray-900" >
@@ -12,6 +13,9 @@ export default function HeroBanner() {
             alt="nathan's face profile picture"
           />
           <h1 className="text-center text-5xl">Nathan Geronimo | Software Engineer</h1>
+          <h2 className="text-center text-4xl font-bold mt-4">
+            Open to Work!
+          </h2>
         </div>
       </section>
     </>
