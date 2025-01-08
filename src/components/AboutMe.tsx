@@ -25,10 +25,7 @@ export default function AboutMe() {
       <br />
       <div id="about-me-text" className="text-3xl max-sm:text-2xl leading-snug mx-auto px-52 max-sm:p-3 max-lg:px-20">
         <p>
-          I have over {calcYears()} years of experience in developing robust applications using Swift, React, and Node.js. I specialize in iOS development using SwiftUI, I hold a certificate in full-stack web development using React, Node.js, Express.js, and MongoDB, and I'm currently working on my own video game using the GameMaker engine.
-        </p>
-        <p className="text-center underline underline-offset-4 mt-4">
-          I'm open to remote or on-site/hybrid work in the San Francisco Bay Area.
+          I have over {calcYears()} years of experience in developing robust applications using Swift, React, and Node.js. I specialize in iOS development using SwiftUI, I hold a certificate in full-stack web development using React, Node.js, Express.js, and MongoDB, and I'm currently learning the Next.js framework using the T3 stack.
         </p>
 
         <br />
@@ -78,6 +75,11 @@ export default function AboutMe() {
             with my loving partner, hangout with my friends whether its through
             Discord or IRL, travel to see family, participate in my church
             activities/worship throughout the week, and always thinking of my next passion project.
+          </p>
+
+          <br />
+          <p className="text-center font-bold">
+            "See a need, fill a need!"
           </p>
 
           <br />
