@@ -78,6 +78,11 @@ export default function AboutMe() {
           </p>
 
           <br />
+          <p className="text-center font-bold">
+            "See a need, fill a need!"
+          </p>
+
+          <br />
           <div className="text-center">
             <label>----------------</label>
             <p>
